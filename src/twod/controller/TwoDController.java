@@ -13,21 +13,22 @@ public class TwoDController
 	public TwoDController()
 	{
 		myPokeBalls = new PokeBall [3][3];
+		setupArray();
 		baseFrame = new TwoDFrame(this);
 	}
 	
 	public void start()
 	{
-		setupArray();
+		
 	}
 	
 	private void setupArray()
 	{
 		for(int row = 0; row < myPokeBalls.length; row++)
 		{
-			for(int col = 0; col < trainerPokeballs[0].length; col++)
+			for(int col = 0; col < myPokeballs[0].length; col++)
 			{
-				myPokeBalls[row][col] = new trainerPokeBalls();
+				myPokeBalls[row][col] = new myPokeBalls();
 				if(col % 2 == 0)
 				{
 					myPokeBalls[row][col].setNumberOfPokeBalls(col + 5);
