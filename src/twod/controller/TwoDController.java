@@ -8,7 +8,7 @@ import twod.view.TwoDFrame;
 public class TwoDController
 {
 	private TwoDFrame baseFrame;
-	private Pokeball [][] myPokeBalls;
+	private PokeBall [][] myPokeBalls;
 	
 	public TwoDController()
 	{
@@ -26,12 +26,12 @@ public class TwoDController
 	{
 		for(int row = 0; row < myPokeBalls.length; row++)
 		{
-			for(int col = 0; col < myPokeballs[0].length; col++)
+			for(int col = 0; col < myPokeBalls[0].length; col++)
 			{
-				myPokeBalls[row][col] = new myPokeBalls();
+				myPokeBalls[row][col] = new PokeBall();
 				if(col % 2 == 0)
 				{
-					myPokeBalls[row][col].setNumberOfPokeBalls(col + 5);
+					myPokeBalls[row][col].setNumberofPokeballs(col + 5);
 				}
 				else
 				{
@@ -41,8 +41,8 @@ public class TwoDController
 		}
 	}
 
-	public Pokeballs[][] getTrainerPokeBalls()
+	public PokeBall[][] getTrainerPokeBalls()
 	{
-		return trainerPokeballs;
+		return myPokeBalls;
 	}
 }
